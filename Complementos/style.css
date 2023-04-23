@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  background-color: rgb(6, 1, 19);
+  background-image: url("../Assets/Fundo.png");
+  background-size: 430px;
+}
+
+#Principal {
+  border-radius: 30px;
+
+  margin-top: 100px;
+
+  color: rgb(224, 224, 224);
+}
+
+h1 {
+  margin-top: 45px;
+
+  font-size: 55px;
+  text-align: center;
+
+  text-shadow: rgba(199, 191, 219, 0.788) 0px 0px 20px;
+}
+
+h2 {
+  font-size: 35px;
+  text-align: center;
+
+  margin-top: 35px;
+
+  text-shadow: white -0.5px 0.5px 3px;
+
+  color: rgb(224, 224, 224);
+}
+
+.Buttons {
+  width: 500px;
+  height: 100px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: rgb(224, 224, 224);
+  border-width: 3.5px;
+
+  font-size: 35px;
+
+  cursor: pointer;
+}
+
+.Buttons:first-of-type {
+  display: block;
+
+  color: rgb(224, 224, 224);
+
+  background-color: rgb(13, 2, 41);
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+
+  box-shadow: rgb(255 255 255 / 88%) 0px 0px 10px 2px;
+
+  transition: box-shadow ease-in-out 0.2s, transform ease-in-out 0.2s,
+    border-color ease-in-out 0.2s, color ease-in-out 0.2s,
+    background-color ease-in-out 0.2s;
+}
+
+.Buttons:first-of-type:hover {
+  box-shadow: rgb(197, 197, 197) 0px 0px 20px 5px;
+  transform: scale(1.05);
+
+  border-color: rgb(21, 5, 58);
+
+  color: black;
+  background-color: rgb(197, 197, 197);
+}
+
+.IconSvg {
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  z-index: 1;
+
+  width: 100px;
+  height: auto;
+
+  cursor: pointer;
+
+  transition: filter ease-in-out 0.18s, transform ease-in-out 0.18s;
+}
+
+.IconSvg:hover {
+  filter: drop-shadow(rgb(197, 197, 197) 0px 0px 5px);
+  transform: scale(1.05);
+}
+
+#Ovelha {
+  position: absolute;
+  top: -100%;
+  left: 0px;
+
+  width: 30%;
+  height: 100%;
+
+  background-color: rgba(223, 223, 223);
+
+  transition: all ease-in-out 0.35s;
+}
+
+.Opções {
+  width: 800px;
+  height: 50px;
+
+  margin-top: 60px;
+
+  cursor: pointer;
+
+  border-radius: 15px;
+  border-style: solid;
+  border-color: #7a8ba1;
+  background-color: rgb(6, 1, 19);
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  color: rgb(224, 224, 224);
+  font-size: 20px;
+
+  transition: box-shadow ease-in-out 0.2s, transform ease-in-out 0.2s,
+    border-color ease-in-out 0.2s, color ease-in-out 0.2s,
+    background-color ease-in-out 0.2s;
+}
+
+.Opções:hover {
+  box-shadow: rgb(197, 197, 197) 0px 0px 20px 5px;
+  transform: scale(1.05);
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.error-popup {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  background-color: #f44336;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  animation: slideInDown 0.5s ease-in-out;
+}
