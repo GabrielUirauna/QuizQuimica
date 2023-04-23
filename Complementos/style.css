@@ -4,9 +4,9 @@
 }
 
 html {
-  background-color: rgb(6, 1, 19);
-  background-image: url("../Assets/Fundo.png");
-  background-size: 430px;
+  /* background-color: rgb(6, 1, 19); */
+  background-image: url("https://images.alphacoders.com/104/1048949.jpg");
+  background-size: 1000px;
 }
 
 #Principal {

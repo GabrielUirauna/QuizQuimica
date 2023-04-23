@@ -66,6 +66,11 @@ function ConfigPergunta() {
   });
   $(".Opções").click(function () {
     if ($(this).index() - 1 == Perguntas[PerguntaAtual].Resposta) {
+      if (PerguntaAtual == Perguntas.length - 1) {
+        alert("Parabéns, você acertou todas as perguntas!");
+        window.location.href = "index.html";
+        return;
+      }
       PerguntaAtual++;
       alert("Resposta certa");
       ConfigPergunta();
@@ -81,9 +86,18 @@ function showErrorPopup(message) {
   popup.innerText = message;
   document.body.appendChild(popup);
 
-  setTimeout(() => { 
+  setTimeout(() => {
     popup.remove();
   }, 3000);
 }
 
+function showSuccessPopup(message) {
+  const popup = document.createElement("div");
+  popup.classList.add("success-popup");
+  popup.innerText = message;
+  document.body.appendChild(popup);
 
+  setTimeout(() => {
+    popup.remove();
+  }, 3000);
+}
