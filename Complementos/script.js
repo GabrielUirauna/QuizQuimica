@@ -8,6 +8,8 @@ var Cont = 0;
 
 var PerguntaAtual = 0;
 
+let pontos = 0;
+
 var Perguntas = [
   {
     Pergunta: "Qual a função oxigenada que possui o grupo funcional -OH?",
@@ -26,7 +28,7 @@ var Perguntas = [
   },
   {
     Pergunta:
-      "Qual a função nitrogenada que possui o grupo funcional -NH-CO-R?",
+      "Qual a função nitrogenada que possui o grupo funcional -CONH2?",
     Opções: ["Nitrila", "Amina", "Amida", "Nitrocomposto"],
     Resposta: 2,
   },
@@ -67,15 +69,17 @@ function ConfigPergunta() {
   $(".Opções").click(function () {
     if ($(this).index() - 1 == Perguntas[PerguntaAtual].Resposta) {
       if (PerguntaAtual == Perguntas.length - 1) {
-        alert("Parabéns, você acertou todas as perguntas!");
+        alert(`Parabéns, você ganhou ${pontos} pontos! Compartilhe com a turma!`);
         window.location.href = "index.html";
         return;
       }
       PerguntaAtual++;
       alert("Resposta certa");
+      pontos += 45;
       ConfigPergunta();
     } else {
       showErrorPopup("Resposta errada");
+      pontos -= 15;
     }
   });
 }
